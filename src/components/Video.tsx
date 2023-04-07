@@ -1,3 +1,4 @@
+import { DefaultUi, Player, Youtube } from "@vime/react";
 import {
   CaretRight,
   DiscordLogo,
@@ -6,17 +7,22 @@ import {
   Lightning,
 } from "phosphor-react";
 
+import "@vime/core/themes/default.css";
+
 export function Video() {
   return (
     <div className="flex-1">
       <div className="bg-black flex justify-center">
         <div className="h-full w-full max-w-[1100px] max-h-[60vh] aspect-video">
-          video
+          <Player>
+            <Youtube videoId="9Ts6TjYtsTU" />
+            <DefaultUi />
+          </Player>
         </div>
       </div>
 
-      <div className="p8 max-w-[1100px] mx-auto">
-        <div className="flex itens-start gap-16">
+      <div className="p-8 max-w-[1100px] mx-auto">
+        <div className="flex items-start gap-16">
           <div className="flex-1">
             <h1 className="txt-2xl font-bold">
               Aula 01 - Abertura do Ignate çab
@@ -28,10 +34,14 @@ export function Video() {
               facilis sit.
             </p>
 
-            <div className="flex itens-center gap-4 mt-6">
-              <img src="https://github.com/eduardoPanzo.png" alt="" />
+            <div className="flex items-center gap-4 mt-6">
+              <img
+                className="h-16 w-16 rounded-full border-2 border-blue-500"
+                src="https://github.com/eduardoPanzo.png"
+                alt=""
+              />
 
-              <div>
+              <div className="leading-relaxed">
                 <strong className="font-bold text-2xl block">
                   João E. Panzo
                 </strong>
